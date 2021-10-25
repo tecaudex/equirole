@@ -9,6 +9,10 @@ gem 'pdf-reader'
 gem 'toastr-rails'
 gem 'will_paginate', '~> 3.3'
 gem 'will_paginate-bootstrap4'
+
+# for pdf generation
+gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.4', '>= 6.1.4.1'
 # Use sqlite3 as the database for Active Record

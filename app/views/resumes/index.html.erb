@@ -7,7 +7,9 @@
         <th scope="col">Submitted By</th>
         <th scope="col">Email</th>
         <th scope="col">Created At</th>
-        <th scope="col">Action</th>
+        <% if current_user.present? %>
+          <th scope="col">Action</th>
+        <% end %>
       </tr>
     </thead>
     <tbody>
@@ -17,7 +19,9 @@
           <td><%= resume.full_name %></td>
           <td><%= resume.email %></td>
           <td><%= resume.created_at.strftime("%F %T")%></td>
-          <td><button type="button" class="btn btn-success btn-sm pdf_btn">Generate Pdf</button></td>
+          <% if current_user.present? %>
+           <td><%= link_to 'Generate Pdf', generate_pdf_path(id: resume.id, format: :pdf), target: '_blank', class: 'btn btn-success btn-sm pdf_btn' %></td>
+          <% end %>
         </tr>
       <% end %>
 

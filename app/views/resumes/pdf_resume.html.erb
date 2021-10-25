@@ -1,0 +1,7 @@
+<h3> Resume # <%= @resume.id %></h3>
+
+<% @data.drop(3).each do |data|  %>
+  <%= data.tr("\n","") %>
+  <br>
+  <br>
+<% end %>
