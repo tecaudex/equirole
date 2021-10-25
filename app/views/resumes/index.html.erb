@@ -16,8 +16,8 @@
       <% @resumes.each do |resume| %>
         <tr>
           <th scope="row"><%= resume.id %></th>
-          <td><%= resume.full_name %></td>
-          <td><%= resume.email %></td>
+          <td><%= resume.user.username %></td>
+          <td><%= resume.user.email %></td>
           <td><%= resume.created_at.strftime("%F %T")%></td>
           <% if current_user.present? %>
            <td><%= link_to 'Generate Pdf', generate_pdf_path(id: resume.id, format: :pdf), target: '_blank', class: 'btn btn-success btn-sm pdf_btn' %></td>
