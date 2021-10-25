@@ -1,0 +1,44 @@
+
+
+<div style="text-align: center; background-color: #e9ecef; width: 50%; margin-left: 20%">
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @ad.title %>
+</p>
+<div >
+  <% if @ad.image.attached? %>
+    <%=image_tag(@ad.image,  size: "200x200") %>
+  <% end %>
+</div>
+<p>
+  <strong>Description:</strong>
+  <%= @ad.description %>
+</p>
+<p>
+  <strong>Poster Name:</strong>
+  <%= @user.email %>
+
+</p>
+<p>
+  <strong>Price:</strong>
+  <%= @ad.price %>
+</p>
+
+<p>
+  <strong>Catorgory:</strong>
+  <%= @ad.catorgory %>
+</p>
+<% if user_signed_in? %>
+<% if current_user.id == @user.id %>
+
+<%= link_to 'Edit', edit_ad_path(@ad),class: 'btn btn-success' %> |
+    <%= link_to 'Back', ads_path,class: 'btn btn-success' %>
+  <%else %>
+<%= link_to 'Back', ads_path,class: 'btn btn-success' %>
+  <%end %>
+<%end %>
+
+</div>

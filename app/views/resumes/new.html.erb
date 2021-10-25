@@ -1,0 +1,20 @@
+<div style="margin-top: 70px" class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card box">
+
+        <%= form_with(model: @resume) do |f| %>
+          <h3>Post Resume</h3>
+          <%#= f.text_field :title, placeholder:"Enter title"%>
+          <%#= f.file_field :image%>
+          <div class="mb-3" style="margin-top: 60px;">
+            <label for="formFile" class="form-label" style="color: grey">*upload pdf resume file</label>
+            <%= f.file_field :document, class: 'form-control', type:'file', id:'formFile', required: true%>
+          </div>
+          </br>
+          <%= f.submit "Post Resume" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

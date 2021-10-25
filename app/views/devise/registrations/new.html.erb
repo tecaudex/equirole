@@ -1,0 +1,23 @@
+<div class="container box_container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card box">
+
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= render "devise/shared/error_messages", resource: resource %>
+          <h1>Register</h1>
+          <%= f.text_field :username, placeholder:"Enter name"%>
+          <%= f.email_field :email, placeholder:"Enter email"%>
+          <%= f.text_field :number, placeholder:"Enter phone number"%>
+
+          <% if @minimum_password_length %>
+          <% end %>
+          <%= f.password_field :password, placeholder: "new-password 6 digits" %>
+            <%= f.password_field :password_confirmation, placeholder: "confirm-password" %>
+          <%= f.submit "Sign Up",value:"SignUp"%>
+        <% end %>
+        <%= render "devise/shared/links" %>
+      </div>
+    </div>
+  </div>
+</div>
