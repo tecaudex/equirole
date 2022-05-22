@@ -1,13 +1,16 @@
-<div style="margin-top: 70px" class="container">
+<div style="margin-top: 150px" class="container">
   <div class="row">
     <div class="col-md-12">
-      <div class="card box">
-
+      <div class="card box upload_box">
         <%= form_with(model: @resume) do |f| %>
-          <h3>Post Resume</h3>
+          <h2>Upload Resume</h2>
           <%#= f.text_field :title, placeholder:"Enter title"%>
           <%#= f.file_field :image%>
           <div class="mb-3" style="margin-top: 60px;">
+            <%= f.select :role, options_for_select(Role.distinct.pluck(:position, :id).unshift('Select Role')), {}, :class => 'form-select' %>
+          </div>
+
+          <div class="mb-3" style="margin-top: 30px;">
             <label for="formFile" class="form-label" style="color: grey">*upload pdf resume file</label>
             <%= f.file_field :document, class: 'form-control', type:'file', id:'formFile', required: true%>
           </div>

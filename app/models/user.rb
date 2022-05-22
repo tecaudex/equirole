@@ -5,4 +5,13 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :resumes
   has_many :ads
+
+  enum role: {
+    user: 0,
+    admin: 1
+  }
+
+  def admin
+    return true if current_user.role == 'admin'
+  end
 end

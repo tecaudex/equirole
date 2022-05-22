@@ -1,0 +1,57 @@
+// Place all the styles related to the roles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.role_box{
+  background-color: white;
+  padding: 40px;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+}
+
+.role_box input[type="text"]:focus{
+  border-color: #7D60F5
+}
+
+.role_box input[type="text"]{
+  border: 0;
+  background: #f1f1f1;
+  display: block;
+  text-align: center;
+  border: 2px solid #b2b2b2;
+  padding: 10px 10px;
+  //width: 400ppx;
+  outline: none;
+  color: #474747;
+  border-radius: 24px;
+  transition: 0.25s
+}
+
+
+.role_box input[type="submit"] {
+  border: 0;
+  background: none;
+  font-weight: 500;
+  display: block;
+  text-align: center;
+  border: 2px solid #7D60F5;
+  padding: 10px 65px;
+  outline: none;
+  color: #7D60F5;
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer
+}
+
+.role_box input[type="submit"]:hover {
+  background: #7D60F5;
+  color: white;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover{
+  background: #7D60F5 !important;
+  color: white !important;
+  border: none !important;
+}
+
+#resume_table_paginate a:hover{
+  color: white !important;
+}

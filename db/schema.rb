@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_22_113645) do
+ActiveRecord::Schema.define(version: 2022_04_10_122705) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -95,7 +95,18 @@ ActiveRecord::Schema.define(version: 2021_10_22_113645) do
     t.datetime "updated_at", precision: 6, null: false
     t.integer "user_id", null: false
     t.string "raw_data"
+    t.integer "role_id", null: false
+    t.integer "status", default: 0
+    t.index ["role_id"], name: "index_resumes_on_role_id"
     t.index ["user_id"], name: "index_resumes_on_user_id"
+  end
+
+  create_table "roles", force: :cascade do |t|
+    t.string "position"
+    t.string "category"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "created_by"
   end
 
   create_table "skillstools", force: :cascade do |t|
@@ -116,6 +127,9 @@ ActiveRecord::Schema.define(version: 2021_10_22_113645) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "first_name"
+    t.string "last_name"
+    t.integer "role", default: 0
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
@@ -125,6 +139,7 @@ ActiveRecord::Schema.define(version: 2021_10_22_113645) do
   add_foreign_key "educations", "resumes"
   add_foreign_key "experiences", "resumes"
   add_foreign_key "publications", "experiences"
+  add_foreign_key "resumes", "roles"
   add_foreign_key "resumes", "users"
   add_foreign_key "skillstools", "resumes"
 end

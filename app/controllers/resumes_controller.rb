@@ -3,7 +3,13 @@ class ResumesController < ApplicationController
   skip_before_action :authorize_page, only: [:index]
 
   def index
-    @resumes = Resume.paginate(page: params[:page], per_page: 5)
+    if current_user.admin?
+      @pending_resumes = Resume.where(status: 'pending')
+      @approved_resumes = Resume.where(status: 'approved')
+    else
+      @resumes = current_user.resumes
+    end
+    # @resumes = Resume.paginate(page: params[:page], per_page: 5)
   end
 
   def new
@@ -12,6 +18,7 @@ class ResumesController < ApplicationController
 
   def create
     resume = params["resume"]
+    role = resume["role"]
     doc = resume["document"]
     # links = email = address = []
     data = ""
@@ -46,13 +53,27 @@ class ResumesController < ApplicationController
       exp_ind = ind if str.tr("\n","").start_with?('EXPERIENCE', 'experience')
     end
 
-    resume = Resume.create(full_name: data_arr[0].strip, address: address.first, email: email.reject(&:nil?).first, phone_number: phone_num, weblinks: links.join(','), created_at: DateTime.current, user_id: current_user.id, raw_data: data)
+    resume = Resume.create(full_name: data_arr[0].strip, address: address.first, email: email.reject(&:nil?).first, phone_number: phone_num, weblinks: links.join(','), created_at: DateTime.current, user_id: current_user.id, role_id: role, raw_data: data)
 
     # s.scan(/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i).first  for email
     # s.gsub(/[^0-9]/, '') for contact number
     # tr("\n","") remove \n
 
-    flash[:success] = 'Successfully Resume Submitted!'
+    flash[:success] = 'Successfully Submitted for Approval!'
+    redirect_to root_path
+  end
+
+  def destroy
+    @resume = Resume.find params['id']
+    @resume.delete
+    flash[:success] = 'Successfully Deleted!'
+    redirect_to root_path
+  end
+
+  def approve
+    @resume = Resume.find params['id']
+    @resume.update(status: 'approved')
+    flash[:success] = 'Successfully Approved!'
     redirect_to root_path
   end
 
