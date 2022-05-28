@@ -7,7 +7,7 @@
 
       </div>
       <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
-        <%= image_tag 'hero-img.png', class: 'img-fluid', alt: 'Banner'%>
+        <%#= image_tag 'hero-img.png', class: 'img-fluid', alt: 'Banner'%>
       </div>
     </div>
   </div>
@@ -18,20 +18,21 @@
   <!-- ======= About Section ======= -->
   <section id="about" class="about">
     <div class="container" data-aos="fade-up">
-      <div class="row gx-0">
+      <div class="row gx-0" style="padding-top: 30px">
 
         <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
           <div class="content">
-            <h3>Who We Are</h3>
-            <h2>This is sample text, Original text will be replace here, once provided.</h2>
-            <p>
-              Equirole collects personal data about you in order to assess your suitability (or on behalf of you through a recruiting partner) for a position (usually in the form of a resume). This may include
-              your education and qualifications, where you have worked and the type of work you have done. We also collect your contact details in order to contact you for a role. When you submit an
-              application, we may also obtain additional information from your resume, such as your photo, interests and hobbies            </p>
+            <h3>Hiring Has To Change As The<br> World Evolves</h3>
+            <p>Equirole’s BRP was built to change the first step in the hiring process. Equirole’s BRP uses
+              artificial intelligence to remove personal information from a resume, mitigating conscious and
+              unconscious bias from the recruiting process. This allows recruiters and hiring managers to
+              focus solely on each applicant’s merits before finalizing which applicants will be contacted or
+              interviewed. <br/><br/>Equirole’s BRP mitigates bias by removing the following criteria</p>
+            <%= image_tag 'icons.png', class: 'img_icons', alt: 'icons'%>
           </div>
         </div>
         <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
-          <%= image_tag 'about.jpg', class: 'img-fluid', alt: 'About image'%>
+          <%= image_tag 'mockup.jpg', class: 'mockup', alt: 'About image'%>
         </div>
       </div>
     </div>
@@ -39,58 +40,58 @@
 
 
   <!-- ======= Features Section ======= -->
-  <section id="features" class="features" style="background-color: #f6f9fe;">
-    <div class="container" data-aos="fade-up">
-      <header class="section-header">
-        <p>WHY ITS IMPORTANT</p>
-      </header>
-      <div class="row">
-        <div class="col-lg-6">
-          <%= image_tag 'features.png', class: 'img-fluid', alt: 'features image'%>
-        </div>
-        <div class="col-lg-6 mt-5 mt-lg-0 d-flex">
-          <div class="row align-self-center gy-4">
-            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="200">
-              <div class="feature-box d-flex align-items-center" style="background-color: white;">
-                <i class="fa fa-check" aria-hidden="true"></i>
-                <h3>Reason 1</h3>
-              </div>
-            </div>
-            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="300">
-              <div class="feature-box d-flex align-items-center" style="background-color: white;">
-                <i class="fa fa-check" aria-hidden="true"></i>
-                <h3>Reason 2</h3>
-              </div>
-            </div>
-            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="400">
-              <div class="feature-box d-flex align-items-center" style="background-color: white;">
-                <i class="fa fa-check" aria-hidden="true"></i>
-                <h3>Reason 3</h3>
-              </div>
-            </div>
-            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="500">
-              <div class="feature-box d-flex align-items-center" style="background-color: white;">
-                <i class="fa fa-check" aria-hidden="true"></i>
-                <h3>Reason 4</h3>
-              </div>
-            </div>
-            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="600">
-              <div class="feature-box d-flex align-items-center" style="background-color: white;">
-                <i class="fa fa-check" aria-hidden="true"></i>
-                <h3>Reason 5</h3>
-              </div>
-            </div>
-            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="700">
-              <div class="feature-box d-flex align-items-center" style="background-color: white;">
-                <i class="fa fa-check" aria-hidden="true"></i>
-                <h3>Reason 6</h3>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> <!-- / row -->
-    </div>
-  </section><!-- End Features Section -->
+<!--  <section id="features" class="features" style="background-color: #f6f9fe;">-->
+<!--    <div class="container" data-aos="fade-up">-->
+<!--      <header class="section-header">-->
+<!--        <p>WHY ITS IMPORTANT</p>-->
+<!--      </header>-->
+<!--      <div class="row">-->
+<!--        <div class="col-lg-6">-->
+          <%#= image_tag 'features.png', class: 'img-fluid', alt: 'features image'%>
+<!--        </div>-->
+<!--        <div class="col-lg-6 mt-5 mt-lg-0 d-flex">-->
+<!--          <div class="row align-self-center gy-4">-->
+<!--            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="200">-->
+<!--              <div class="feature-box d-flex align-items-center" style="background-color: white;">-->
+<!--                <i class="fa fa-check" aria-hidden="true"></i>-->
+<!--                <h3>Reason 1</h3>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="300">-->
+<!--              <div class="feature-box d-flex align-items-center" style="background-color: white;">-->
+<!--                <i class="fa fa-check" aria-hidden="true"></i>-->
+<!--                <h3>Reason 2</h3>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="400">-->
+<!--              <div class="feature-box d-flex align-items-center" style="background-color: white;">-->
+<!--                <i class="fa fa-check" aria-hidden="true"></i>-->
+<!--                <h3>Reason 3</h3>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="500">-->
+<!--              <div class="feature-box d-flex align-items-center" style="background-color: white;">-->
+<!--                <i class="fa fa-check" aria-hidden="true"></i>-->
+<!--                <h3>Reason 4</h3>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="600">-->
+<!--              <div class="feature-box d-flex align-items-center" style="background-color: white;">-->
+<!--                <i class="fa fa-check" aria-hidden="true"></i>-->
+<!--                <h3>Reason 5</h3>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="700">-->
+<!--              <div class="feature-box d-flex align-items-center" style="background-color: white;">-->
+<!--                <i class="fa fa-check" aria-hidden="true"></i>-->
+<!--                <h3>Reason 6</h3>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </section>-->
 
 
 
