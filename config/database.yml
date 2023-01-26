@@ -22,8 +22,8 @@ test:
 
 production:
   <<: *default
-  database: d3rlp9qp2mc8k7
+  database: equirole
   port: 5432
-  host: ec2-3-231-82-226.compute-1.amazonaws.com
-  username: cymqohcuoiildw
-  password: 244ba97f090dd005727111872ff25026cf21b0e249e8ca96a067cb4da243f4a0
+  host: ec2-35-153-255-112.compute-1.amazonaws.com
+  username: postgres
+  password: postgres

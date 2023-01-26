@@ -7,6 +7,13 @@ require "capistrano/deploy"
 require 'capistrano/rails/migrations'
 require 'capistrano/passenger'
 require 'capistrano/rbenv'
+require 'capistrano/postgresql' 
+
+set :pg_database, 'equirole'
+set :pg_username, 'postgres'
+set :pg_password, 'postgres'
+set :pg_encoding, 'UTF-8'
+set :pg_pool, '100'
 
 set :rbenv_type, :user
 set :rbenv_ruby, '3.0.0'
