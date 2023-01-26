@@ -4,7 +4,7 @@ require "capistrano/setup"
 require "airbrussh/capistrano"
 # Include default deployment tasks
 require "capistrano/deploy"
-require 'capistrano/rails'
+require 'capistrano/rails/migrations'
 require 'capistrano/passenger'
 require 'capistrano/rbenv'
 

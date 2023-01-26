@@ -2,12 +2,13 @@
 lock "~> 3.17.1"
 
 set :application, "equirole"
-set :repo_url, "git@github.com:itsmumar/equirole.git"
+set :repo_url, "git@github.com:tecaudex/equirole.git"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
+set :branch, 'main'
 set :deploy_to, "/home/deploy/#{fetch :application}"
 
 # Default value for :format is :airbrussh.

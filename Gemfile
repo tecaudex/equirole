@@ -9,6 +9,7 @@ gem 'pdf-reader'
 gem 'toastr-rails'
 gem 'will_paginate', '~> 3.3'
 gem 'will_paginate-bootstrap4'
+gem 'rake', '13.0.3'
 
 # for aws deployment
 gem 'capistrano', '~> 3.11'
