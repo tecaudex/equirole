@@ -10,6 +10,13 @@ gem 'toastr-rails'
 gem 'will_paginate', '~> 3.3'
 gem 'will_paginate-bootstrap4'
 
+# for aws deployment
+gem 'capistrano', '~> 3.11'
+gem 'capistrano-rails', '~> 1.4'
+gem 'capistrano-passenger', '~> 0.2.0'
+gem 'capistrano-rbenv', '~> 2.1', '>= 2.1.4'
+gem "airbrussh", require: false
+
 # for pdf generation
 gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
