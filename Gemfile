@@ -19,7 +19,7 @@ gem 'capistrano-rbenv', '~> 2.1', '>= 2.1.4'
 gem 'capistrano-postgresql', '~> 6.2'
 gem "airbrussh", require: false
 gem 'therubyracer'
-
+gem 'execjs'
 # for pdf generation
 gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'

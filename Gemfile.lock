@@ -308,6 +308,7 @@ DEPENDENCIES
   capistrano-rbenv (~> 2.1, >= 2.1.4)
   capybara (>= 3.26)
   devise
+  execjs
   font-awesome-sass
   jbuilder (~> 2.7)
   jquery-rails
