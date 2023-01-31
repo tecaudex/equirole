@@ -18,6 +18,7 @@ gem 'capistrano-passenger', '~> 0.2.0'
 gem 'capistrano-rbenv', '~> 2.1', '>= 2.1.4'
 gem 'capistrano-postgresql', '~> 6.2'
 gem "airbrussh", require: false
+gem 'therubyracer'
 
 # for pdf generation
 gem 'wicked_pdf'
