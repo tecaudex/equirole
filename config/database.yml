@@ -24,6 +24,6 @@ production:
   <<: *default
   database: equirole
   port: 5432
-  host: ec2-35-153-255-112.compute-1.amazonaws.com
+  host: ec2-54.162.83.149.compute-1.amazonaws.com
   username: postgres
   password: postgres
